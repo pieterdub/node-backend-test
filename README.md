@@ -96,6 +96,36 @@ npm run test
 - **`/resources/lineage/:id`** → Fetches lineage of a resource.
 - **`/calculations/:id`** → Evaluates a calculation based on variables.
 
+## Manual Testing
+
+**1️⃣ Test lineage**
+```sh
+curl http://localhost:3000/resources/lineage/3
+```
+
+**2️⃣ Test calculations**
+```sh
+curl http://localhost:3000/calculations/2
+```
+
+**3️⃣ Acces the database and change a variable value**
+eg
+```
+| id |    name     | value
+  1    variable1       4 (was 2.5)
+```
+
+### **4️⃣ Do a recalculation for variable 1 **
+```sh
+curl http://localhost:3000/calculations/recalculate/1
+
+```
+should result in an array of affected calculations and new_value
+```json
+{"calculatedValue":[{"id":1,"new_value":24}]}
+
+```
+
 ## 📡 API Endpoints
 
 ### **1️⃣ Resource Lineage API**
