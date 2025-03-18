@@ -79,6 +79,8 @@ npm run start
 ```
 Server will start at **http://localhost:3000**
 
+<br>
+
 ## Testing
 
 ### Prerequisites
@@ -95,6 +97,8 @@ npm run test
 ### Test Coverage
 - **`/resources/lineage/:id`** → Fetches lineage of a resource.
 - **`/calculations/:id`** → Evaluates a calculation based on variables.
+
+<br>
 
 ## Manual Testing
 
@@ -125,6 +129,8 @@ should result in an array of affected calculations and new_value
 {"calculatedValue":[{"id":1,"new_value":24}]}
 
 ```
+
+<br>
 
 ## 📡 API Endpoints
 
